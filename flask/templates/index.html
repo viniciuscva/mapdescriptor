@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Map Descriptor</h1>
+    <div class="folium-map">
+        <iframe class="map", src="/map"></iframe>
+    </div>
+
+    <div class="description">
+        <p>
+            Você está visualizando uma área de tamanho aproximado de X no sentido leste-oeste, e Y no sentido norte-sul.
+Esta região está contida no Brasil e abrange partes do Nordeste incluindo os estados RN, PB, PE, AL, CE, BA.
+Aqui você vai encontrar (lista de POIs mais importantes).
+Para um trajeto de carro de uma extremidade a outra estima-se um tempo médio de X horas.
+
+        </p>
+    </div>
+</body>
+</html>
