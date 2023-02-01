@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+
     <h1>Map Descriptor</h1>
+
+    <!-- <form id='map_bbox_form' method = 'post' action='#' style='display:none'>
+        <input id='map_bbox' type='text' name='map_bbox'>
+    </form> -->
+
+
     <div class="folium-map">
         <iframe id="map-iframe" class="map", src="/map"></iframe>
     </div>
@@ -23,18 +30,34 @@ Para um trajeto de carro de uma extremidade a outra estima-se um tempo médio de
         </p>
     </div>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> -->
 
 <script>
-    function send_bbox() {
-        $.ajax({
-                    url:"/test",
-                    type:"POST",
-                    contentType: "application/json",
-                    data: JSON.stringify(map_909f964ddc5c99b489150dd967195fd9.getBounds())
-        });
+    // function send_bbox() {
+    //     $.ajax({
+    //                 url:"/test",
+    //                 type:"POST",
+    //                 contentType: "application/json",
+    //                 data: JSON.stringify(map_909f964ddc5c99b489150dd967195fd9.getBounds())
+    //     });
 
-    }
+    // }
+
+// var map_bbox = document.getElementById('map_bbox')
+// map_bbox.setAttribute('value', 'vinivinivini')
+// document.getElementById('map_bbox_form').submit()
+
+let mapa = document.getElementById('map-iframe').contentWindow
+console.log(mapa)
+fetch("/map_bbox", {
+  method: "POST",
+  body: JSON.stringify(mapa.getBounds()),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8"
+  }
+});
+
+// document.getElementById('map-iframe').contentWindow.map_9faa2b1b4c09f42625c0bb10e6a61602.getBounds()
 </script>
 
 

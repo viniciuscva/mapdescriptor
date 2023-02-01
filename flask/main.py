@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for, jsonify
 import folium
 import json
 
@@ -30,7 +30,7 @@ start_coords = (-7.013426639837533, -36.778842655477064,)
 folium_map = folium.Map(location=start_coords, zoom_start=7)
 folium_map.save('templates/map.html')
 
-@app.route('/')
+@app.route('/', methods = ['GET', 'POST'])
 def index():
     return render_template('index.html')
 
@@ -38,15 +38,18 @@ def index():
 def map():
     return render_template('map.html')
 
-@app.route('/test', methods=['POST'])
-def test():
-    output = request.get_json()
-    print(output) # This is the output that was stored in the JSON within the browser
-    print(type(output))
-    result = json.loads(output) #this converts the json output to a python dictionary
-    print(result) # Printing the new dictionary
-    print(type(result))#this shows the json converted as a python dictionary
-    return result
+@app.route('/map_bbox', methods = ['POST'])
+def example():
+    print(dir(request))
+    print('fiz')
+    map_bbox = request.get_json()
+    print('Estou aqui 1')
+    print(map_bbox)
+    print('Estou aqui 2')
+    return map_bbox
+
+
+    #return render_template('example.html')
 
 
 if __name__ == '__main__':
