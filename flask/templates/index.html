@@ -10,7 +10,7 @@
 <body>
     <h1>Map Descriptor</h1>
     <div class="folium-map">
-        <iframe class="map", src="/map"></iframe>
+        <iframe id="map-iframe" class="map", src="/map"></iframe>
     </div>
 
     <div class="description">
@@ -22,5 +22,21 @@ Para um trajeto de carro de uma extremidade a outra estima-se um tempo médio de
 
         </p>
     </div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+<script>
+    function send_bbox() {
+        $.ajax({
+                    url:"/test",
+                    type:"POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(map_909f964ddc5c99b489150dd967195fd9.getBounds())
+        });
+
+    }
+</script>
+
+
 </body>
 </html>
