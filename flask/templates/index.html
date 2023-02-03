@@ -13,11 +13,6 @@
 
     <h1>Map Descriptor</h1>
 
-    <!-- <form id='map_bbox_form' method = 'post' action='#' style='display:none'>
-        <input id='map_bbox' type='text' name='map_bbox'>
-    </form> -->
-
-
     <div class="folium-map">
         <iframe id="map-iframe" class="map" , src="/map"></iframe>
         <button id="update">Atualizar</button>
@@ -25,35 +20,15 @@
 
     <div class="description">
         <p>
-            Você está visualizando uma área de tamanho aproximado de X no sentido leste-oeste, e Y no sentido norte-sul.
-            Esta região está contida no Brasil e abrange partes do Nordeste incluindo os estados RN, PB, PE, AL, CE, BA.
-            Aqui você vai encontrar (lista de POIs mais importantes).
-            Para um trajeto de carro de uma extremidade a outra estima-se um tempo médio de X horas.
+            {{text_description}}
 
         </p>
     </div>
 
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> -->
-
     <script>
-        // function send_bbox() {
-        //     $.ajax({
-        //                 url:"/test",
-        //                 type:"POST",
-        //                 contentType: "application/json",
-        //                 data: JSON.stringify(map_909f964ddc5c99b489150dd967195fd9.getBounds())
-        //     });
-
-        // }
-
-        // var map_bbox = document.getElementById('map_bbox')
-        // map_bbox.setAttribute('value', 'vinivinivini')
-        // document.getElementById('map_bbox_form').submit()
-
         window.onload = function () {
-            getData()
+            // getData()
             document.getElementById("update").onclick = getData
-            
 
             function getData() {
                 const contentWindow = document.getElementById('map-iframe').contentWindow
@@ -76,12 +51,6 @@
             }
             
         }
-
-// console.log(document.getElementById('map-iframe').contentWindow)
-
-
-
-// document.getElementById('map-iframe').contentWindow.map_9faa2b1b4c09f42625c0bb10e6a61602.getBounds()
     </script>
 
 

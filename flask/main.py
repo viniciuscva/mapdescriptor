@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, url_for, jsonify
 import folium
 import json
+from geoutils import generate_text
+
 
 app = Flask(__name__)
 
@@ -29,6 +31,7 @@ app = Flask(__name__)
 start_coords = (-7.013426639837533, -36.778842655477064,)
 folium_map = folium.Map(location=start_coords, zoom_start=7)
 folium_map.save('templates/map.html')
+text_description = ""
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
@@ -41,11 +44,11 @@ def map():
 @app.route('/map_bbox', methods = ['POST'])
 def example():
     map_bbox = request.get_json()
-    print(map_bbox)
+    south, west = map_bbox['_southWest']['lat'], map_bbox['_southWest']['lng']
+    north, east = map_bbox['_northEast']['lat'], map_bbox['_northEast']['lng']
+    text_description = generate_text(north, south, east, west)
+    print(text_description)
     return map_bbox
-
-
-    #return render_template('example.html')
 
 
 if __name__ == '__main__':
