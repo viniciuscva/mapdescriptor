@@ -31,7 +31,7 @@ app = Flask(__name__)
 start_coords = (-7.013426639837533, -36.778842655477064,)
 folium_map = folium.Map(location=start_coords, zoom_start=7)
 folium_map.save('templates/map.html')
-text_description = "dafskjdlfjalfsjdflks"
+text_description = ""
 
 @app.route('/')
 def index():

@@ -13,16 +13,20 @@
 
     <h1>Map Descriptor</h1>
 
-    <div class="folium-map">
-        <iframe id="map-iframe" class="map" , src="/map"></iframe>
+    <div id="main">
+        <div class="folium-map">
+            <iframe id="map-iframe" class="map" , src="/map"></iframe>
+        </div>
+    
         <button id="update">Atualizar</button>
+    
+        <div class="description">
+            <p id='p-text-description'>
+            </p>
+        </div>
     </div>
 
-    <div class="description">
-        <p id='p-text-description'>
-            {{ text_description }}
-        </p>
-    </div>
+    
 
     <script>
     window.onload = function () {

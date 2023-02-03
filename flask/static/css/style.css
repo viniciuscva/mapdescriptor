@@ -1,11 +1,25 @@
-.map, .description {
-    /* max-width: 45%;
-    min-width: 600px; */
-    width: 600px;
-    min-height: 500px;
-    border: 5pt solid black;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.description {
-    min-height: 200px;
+html, body {
+    height: 100%;
+}
+
+h1{
+    margin: 1em;
+    text-align: center;
+}
+
+#main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#map-iframe {
+    min-width: 45vw;
+    min-height: 50vh;
 }
