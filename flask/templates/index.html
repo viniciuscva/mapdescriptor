@@ -19,38 +19,43 @@
     </div>
 
     <div class="description">
-        <p>
-            {{text_description}}
-
+        <p id='p-text-description'>
+            {{ text_description }}
         </p>
     </div>
 
     <script>
-        window.onload = function () {
-            // getData()
-            document.getElementById("update").onclick = getData
+    window.onload = function () {
+        // getData()
+        document.getElementById("update").onclick = getData
 
-            function getData() {
-                const contentWindow = document.getElementById('map-iframe').contentWindow
-                let mapKey
+        function getData() {
+            const contentWindow = document.getElementById('map-iframe').contentWindow
+            let mapKey
 
-                Object.keys(contentWindow).forEach((key) => {
-                    if (key.startsWith("map")) {
-                        mapKey = key
-                    }
-                })
-                const mapa = contentWindow[mapKey]
-
-                fetch("/map_bbox", {
-                method: "POST",
-                body: JSON.stringify(mapa.getBounds()),
-                headers: {
-                    "Content-type": "application/json; charset=UTF-8"
+            Object.keys(contentWindow).forEach((key) => {
+                if (key.startsWith("map")) {
+                    mapKey = key
                 }
-            });
+            })
+            const mapa = contentWindow[mapKey]
+            //let bounds = mapa.getBounds()
+            //let [north, east] = [bounds['_northEast']['lat'], bounds['_northEast']['lng']]
+
+
+            fetch("/map_bbox", {
+            method: "POST",
+            body: JSON.stringify(mapa.getBounds()),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
             }
-            
+            }).then(res => res.json())
+            .then(data => data['text'])
+            .then(text => document.getElementById('p-text-description').innerHTML = text)
+                // document.getElementById('p-text-description').innerHTML = res;
         }
+        
+    }
     </script>
 
 
