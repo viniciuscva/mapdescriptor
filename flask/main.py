@@ -40,12 +40,8 @@ def map():
 
 @app.route('/map_bbox', methods = ['POST'])
 def example():
-    print(dir(request))
-    print('fiz')
     map_bbox = request.get_json()
-    print('Estou aqui 1')
     print(map_bbox)
-    print('Estou aqui 2')
     return map_bbox
 
 
