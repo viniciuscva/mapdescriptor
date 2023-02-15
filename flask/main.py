@@ -47,6 +47,10 @@ def example():
     map_bbox = request.get_json()
     south, west = map_bbox['_southWest']['lat'], map_bbox['_southWest']['lng']
     north, east = map_bbox['_northEast']['lat'], map_bbox['_northEast']['lng']
+    print('north:', north)
+    print('south:', south)
+    print('east:', east)
+    print('west:', west)
     text_description = generate_text(north, south, east, west)
     #print(text_description)
     return jsonify({'text':text_description})
