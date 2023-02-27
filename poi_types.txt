@@ -1,117 +1,117 @@
 taxi
-outdoor
-shoes
-photo
-department_store
-trade
+bicycle shop
+chocolate shop
 clinic
-motorcycle
+estate_agent shop
+appliance shop
+trade shop
 post_office
+agrarian shop
+hardware shop
 police
 courthouse
-perfumery
+fishing shop
 pharmacy
-cosmetics
+bakery shop
+cosmetics shop
 fuel
-coffee
+copyshop shop
+gift shop
 bank
-furniture
 place_of_worship
 school
-copyshop
 bar
-optician
-gift
 parking_entrance
-fishing
-bag
-convenience
-greengrocer
-clothes
-bicycle
-agrarian
-energy
+doityourself shop
+paint shop
+florist shop
+clothes shop
+car_repair shop
+bag shop
+houseware shop
+alcohol shop
 library
-books
+tyres shop
 college
-medical_supply
-jewelry
+mobile_phone shop
+medical_supply shop
+lottery shop
+chemist shop
+fabric shop
 clock
-pet
 veterinary
-religion
-electronics
+butcher shop
+toys shop
+interior_decoration shop
+games shop
 fast_food
-hairdresser
-beverages
+laundry shop
+stationery shop
 pub
+hairdresser shop
 studio
-supermarket
-tyres
+kiosk shop
+sewing shop
+department_store shop
+social_centre
+coffee shop
+confectionery shop
 restaurant
 atm
-variety_store
-car_parts
+glaziery shop
+nightclub
 bus_station
-massage
-cheese
+car shop
+optician shop
 music_school
-houseware
-fashion_accessories
-toys
-florist
-confectionery
-lottery
-fabric
+energy shop
+pet shop
+jewelry shop
+perfumery shop
+outdoor shop
+greengrocer shop
+electrical shop
 hospital
 vehicle_inspection
-sports
-paint
-music
+sports shop
 car_rental
 drinking_water
-social_centre
-mobile_phone
-kiosk
-chocolate
-stationery
+furniture shop
 dentist
 doctors
+computer shop
+motorcycle_repair shop
+funeral_directors shop
 payment_centre
-doityourself
-car
-appliance
-bed
+massage shop
+supermarket shop
 shower
-computer
+motorcycle shop
 register_office
+music shop
+seafood shop
 marketplace
-estate_agent
+books shop
 cinema
+photo shop
 car_wash
-watches
-hardware
+watches shop
+fashion_accessories shop
 language_school
+tattoo shop
 cafe
-car_repair
-tattoo
-interior_decoration
-butcher
-electrical
-games
-chemist
+religion shop
+shoes shop
+beauty shop
+beverages shop
 fire_station
-laundry
-beauty
-motorcycle_repair
-sewing
+variety_store shop
 driving_school
 ice_cream
-alcohol
-seafood
-funeral_directors
-bakery
-glaziery
+cheese shop
+electronics shop
+car_parts shop
+bed shop
 love_hotel
-nightclub
+convenience shop
 

@@ -20,12 +20,12 @@ for label, expression, scale in poi_rules:
 	rule = root_rule.children()[0].clone()
 	rule.setLabel(label)
 	rule.setFilterExpression(expression)
-
-	try:
+	icon_dir = f'icons/amenities/{label}.svg'
+	if os.path.exists(icon_dir):
 		symbol = QgsSvgMarkerSymbolLayer(f'icons/amenities/{label}.svg')
-	except:
-		symbol = QgsSvgMarkerSymbolLayer('/home/carlos/Documents/mapdescriptor/icons/amenities/other.svg')
-	symbol.setSize(6)
+	else:
+		symbol = QgsSvgMarkerSymbolLayer('icons/amenities/other.svg')
+	symbol.setSize(4)
 	symbol.setStrokeWidth(1)
 	rule.symbol().changeSymbolLayer(0, symbol )
 
