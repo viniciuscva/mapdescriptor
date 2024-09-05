@@ -1,3 +1,5 @@
 .ipynb_checkpoints
 cache
-flask/__pycache__
+__pycache__
+*password*
+candidate_tiles_for_folium.txt
